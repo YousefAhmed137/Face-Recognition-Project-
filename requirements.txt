@@ -1,3 +1,7 @@
-matplotlib
-scikit-learn
+flask
 opencv-python
+numpy
+scikit-learn
+keras-facenet
+ultralytics
+dill
