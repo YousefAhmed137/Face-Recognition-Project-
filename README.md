@@ -105,16 +105,6 @@ Now you’re ready to recognize new faces through the app.
 > **Prediction:** Yousef Ahmed  
 > **Confidence:** 97.5%
 
-![Sample Output](static/sample_output.png)
-
----
-
-## 🔍 System Architecture
-
-> *(Optional — include a system diagram here)*
-
-![System Diagram](static/system_architecture.png)
-
 ---
 
 ## 📂 Project Structure
