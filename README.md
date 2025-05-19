@@ -150,4 +150,7 @@ This project was developed by the DEPI team:
 
 - [@YousefAhmed137](https://github.com/YousefAhmed137)  
 - [@farah-mahmoud](https://github.com/farah-mahmoud)
-- [@Menna waleed](https://github.com/MennaWaleed-eng)
+- [@MennaWaleed-eng](https://github.com/MennaWaleed-eng)
+- [@nada-mohamed878](https://github.com/nada-mohamed878)
+- 
+
