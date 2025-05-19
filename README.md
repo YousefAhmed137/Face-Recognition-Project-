@@ -138,8 +138,7 @@ face-recognition-depi/
 
 ---
 
-## 📝 License
-
+## 📝 Licens
 This project is licensed under the **MIT License**.  
 See the [LICENSE](LICENSE) file for more details.
 
@@ -151,3 +150,4 @@ This project was developed by the DEPI team:
 
 - [@YousefAhmed137](https://github.com/YousefAhmed137)  
 - [@farah-mahmoud](https://github.com/farah-mahmoud)
+- [@Menna waleed](https://github.com/MennaWaleed-eng)
