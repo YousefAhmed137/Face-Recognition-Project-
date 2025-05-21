@@ -1,156 +1,72 @@
-# 🎓 AI Face Recognition System
+# Facial Recognition System
 
-[![Watch the video](https://img.youtube.com/vi/mFkWZtsga0Q/0.jpg)](https://www.youtube.com/watch?v=mFkWZtsga0Q)
-
-> 🎥 Click the image above to watch our face recognition system in action!
-
-This repository contains the graduation project developed for the *Digital Egypt Pioneers Initiative (DEPI)*.  
-The system is an **AI-based face recognition application** that leverages deep learning and classical machine learning techniques to recognize and classify faces in real time.
-
----
-
-## 📌 Project Overview
-
-The goal of this project is to build a reliable and efficient face recognition system using modern AI technologies. The system consists of:
-
-- **Face Detection** using Haar Cascade or YOLOv5  
-- **Face Embedding** using FaceNet  
-- **Face Classification** using Support Vector Machine (SVM)  
-- **Web Interface** built with Flask and styled HTML/CSS  
-- **Real-time Recognition** via webcam or uploaded images  
-
----
-
-## 🧠 Technologies Used
-
-| Component        | Technology                         |
-|------------------|------------------------------------|
-| Face Detection   | OpenCV Haar Cascade, YOLOv5        |
-| Face Embeddings  | FaceNet (Keras/TensorFlow)         |
-| Classifier       | Scikit-learn SVM, LabelEncoder     |
-| Web Application  | Flask                              |
-| Frontend         | HTML, CSS                          |
-| Language         | Python                             |
-
----
+A real-time facial recognition system using ArcFace for face embedding and an SVM classifier for identity recognition. This project demonstrates a full machine learning pipeline from data preprocessing to live video face verification.
 
 ## 🚀 Features
+- Real-time facial recognition using live webcam input
+- Face embedding extraction with the ArcFace deep learning model
+- Identity classification using Support Vector Machine (SVM)
+- Pre-trained on a dataset of well-known public figures
 
-- Real-time face detection and recognition
-- Train the model on new users easily
-- Supports both YOLO and Haar Cascade for detection
-- User-friendly web interface
-- High accuracy using deep learning face embeddings
+## 🧠 Technologies Used
+- Python
+- PyTorch
+- OpenCV
+- NumPy
+- Scikit-learn
 
----
-
-## 🛠 Setup Instructions
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/YousefAhmed137/Face-Recognition-Project-.git
-cd Face-Recognition-Project-
+## 📁 Project Structure
+```
+facial-recognition-system/
+│
+├── arc_face.py               # Main script for real-time recognition
+├── requirements.txt          # Required Python packages
+├── dataset/                  # Face images organized per identity / Replace it with your custom dataset
 ```
 
-### 2. Create a virtual environment and install dependencies
+## 📦 Installation
 
+1. **Clone the repository**
 ```bash
-python -m venv venv
-source venv/bin/activate      # On Windows: venv\Scripts\activate
+git clone https://github.com/farah-mahmoud/facial-recognition-system.git
+cd facial-recognition-system
+```
+
+2. **Install the dependencies**
+```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run the application
+## ▶️ Running the System
+
+To launch the facial recognition system with live camera input, run:
 
 ```bash
-python app.py
+python arc_face.py
 ```
 
-### 4. Access the app
+The system will open your webcam and begin detecting and recognizing faces in real time.
 
-Open your browser and go to:  
-[http://localhost:5000](http://localhost:5000)
+## 📚 How It Works
 
----
+1. **Data Preprocessing:**  
+   Face images from the dataset are detected, aligned, and resized.
 
-## 🧑‍💻 Training on New Users
+2. **Embedding Generation:**  
+   The ArcFace model encodes each face into a 512-dimensional feature vector.
 
-To add and recognize new users:
+3. **Classifier Training:**  
+   These embeddings are used to train an SVM classifier for identity recognition.
 
-1. **Add images** of the user in a new folder:
+4. **Real-Time Inference:**  
+   The live video feed is processed frame by frame. Detected faces are recognized and labeled using the trained SVM.
 
-```
-data/<username>/
-```
+## 📝 Future Improvements
+- Expand dataset with more identities
+- Add support for on-the-fly training
+- Improve performance under low-light or occluded conditions
+- Deploy on edge devices (e.g., Raspberry Pi with Coral or Jetson Nano)
 
-2. **Generate face embeddings**:
-
-```bash
-python utils/generate_embeddings.py
-```
-
-3. **Train the classifier**:
-
-```bash
-python utils/train_classifier.py
-```
-
-Now you’re ready to recognize new faces through the app.
-
----
-
-## 📷 Sample Output
-
-> **Prediction:** Yousef Ahmed  
-> **Confidence:** 97.5%
-
----
-
-## 📂 Project Structure
-
-```
-face-recognition-depi/
-├── app.py                         # Main Flask app
-├── data/                          # Raw user face images
-├── models/                        # YOLO, Haar Cascade, SVM, FaceNet embeddings, LabelEncoder
-│   ├── yolov5s-face.pt
-│   ├── haarcascade_frontalface_default.xml
-│   ├── svm_model.pkl
-│   ├── face_embeddings.npy
-│   └── label_encoder.pkl
-├── static/                        # CSS/JS/Images/output
-│   └── sample_output.png
-├── templates/                     # HTML templates
-├── utils/                         # Preprocessing, embedding, classifier scripts
-│   ├── generate_embeddings.py
-│   └── train_classifier.py
-├── requirements.txt
-└── README.md
-```
-
----
-
-## ⚠️ Notes
-
-- **YOLOv5** must be installed separately or imported via [Ultralytics](https://github.com/ultralytics/yolov5) if you're using the `.pt` model.
-- This is an academic project. For real-world use, ensure you implement **secure data handling**, **encryption**, and **privacy policies**.
-
----
-
-## 📝 Licens
-This project is licensed under the **MIT License**.  
-See the [LICENSE](LICENSE) file for more details.
-
----
-
-## 🙌 Contributors
-
-This project was developed by the DEPI team:
-
-- [@YousefAhmed137](https://github.com/YousefAhmed137)  
-- [@farah-mahmoud](https://github.com/farah-mahmoud)
-- [@MennaWaleed-eng](https://github.com/MennaWaleed-eng)
-- [@nada-mohamed878](https://github.com/nada-mohamed878)
-- 
-
+## 👩‍💻 Author
+**Farah Mahmoud Kamal**  
+[LinkedIn](https://www.linkedin.com/in/farahmahmoud) • [GitHub](https://github.com/farah-mahmoud)
