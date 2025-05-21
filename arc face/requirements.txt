@@ -1,0 +1,6 @@
+insightface
+opencv-python
+scikit-learn
+numpy
+joblib
+onnxruntime
