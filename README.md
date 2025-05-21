@@ -1,4 +1,4 @@
-# Facial Recognition System
+# Facial Recognition System - arcface model version
 
 A real-time facial recognition system using ArcFace for face embedding and an SVM classifier for identity recognition. This project demonstrates a full machine learning pipeline from data preprocessing to live video face verification.
 
